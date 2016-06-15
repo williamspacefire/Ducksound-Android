@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2016 Spacefire
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.meycup.ducksound;
 
 import android.app.SearchManager;
@@ -46,12 +62,12 @@ public class MainActivity extends AppCompatActivity {
         alert.setTitle("Sobre o Ducksound");
         alert.setMessage(
                 "Ducksound é um buscador de músicas grátis, criado por um geek que ama " +
-                        "música e detesta ir em sites não confiáveis para baixar." +
-                        " O Ducksound foi feito para ser símples e fácio de usar, basta " +
+                        "músicas e detesta ir em sites não confiáveis para baixar." +
+                        " O Ducksound foi feito para ser símples e fácil de usar, basta " +
                         "pesquisar sua música e dar um click longo nela para baixar." +
                         " O código fonte deste aplicativo está no Github e você pode contribuir " +
-                        "com o código ou criar sua própria verssão do Ducksound." +
-                        " \n\nGithub: github.com/williamspacefire/ducksound-android"
+                        "com o código ou criar sua própria versão do Ducksound." +
+                        " \n\nGithub: github.com/williamspacefire/Ducksound-Android"
         );
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
