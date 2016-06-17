@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Spacefire
+ * Copyright (C) 2016 Meycup
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,10 +33,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    /**
-     * Your Soundcloud CLIENT_ID here 
-     */
-    final static public String CLIENT_ID = "YOUR CLIENT ID HERE";
+    final static public String CLIENT_ID = "da2849d8ad5fea67366e4da7444f0152";
 
     Toolbar play_bar;
     ListView music_list;

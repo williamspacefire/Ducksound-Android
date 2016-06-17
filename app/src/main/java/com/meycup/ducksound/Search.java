@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Spacefire
+ * Copyright (C) 2016 Meycup
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -81,7 +81,7 @@ public class Search extends AppCompatActivity {
         }
 
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        searchView.setQueryHint("Pesquise por Artista, Banda ou Música");
+        searchView.setQueryHint("Pesquise sua música");
         return true;
     }
 
