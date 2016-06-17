@@ -107,16 +107,10 @@ class BackgroundSearch extends AsyncTask<String, Void, String[][]> {
                 array[i + 1][4] = Jarray.getJSONObject(i).getString("artwork_url");
 
                 try{
-
                     array[i + 1][5] = Jarray.getJSONObject(i).getString("download_url");
-
                 }catch (JSONException e){
-
-                    e.printStackTrace();
-
                     Jarray.getJSONObject(i).put("download_url", "null");
                     array[i + 1][5] = Jarray.getJSONObject(i).getString("download_url");
-
                 }
 
                 array[i + 1][6] = Jarray.getJSONObject(i).getString("streamable");
@@ -270,7 +264,7 @@ class BackgroundSearch extends AsyncTask<String, Void, String[][]> {
                         dir.mkdirs();
                     }
 
-                    DownloadManager DM = (DownloadManager) context.getSystemService(context.DOWNLOAD_SERVICE);
+                    final DownloadManager DM = (DownloadManager) context.getSystemService(context.DOWNLOAD_SERVICE);
 
                     String download_url;
 
@@ -285,7 +279,7 @@ class BackgroundSearch extends AsyncTask<String, Void, String[][]> {
 
                     Uri uri = Uri.parse(download_url.replace("https://","http://"));
 
-                    DownloadManager.Request request = new DownloadManager.Request(uri);
+                    final DownloadManager.Request request = new DownloadManager.Request(uri);
 
                     request.setAllowedNetworkTypes(
                             DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE
@@ -297,10 +291,29 @@ class BackgroundSearch extends AsyncTask<String, Void, String[][]> {
                                             .replace(" ", "_")
                                             .replace(",", "_")
                                             .replace("ç", "c")
-                                            .replace("'", "_") + ".mp3"
+                                            .replace("'", "_") + " ("+context.getResources().getString(R.string.app_name)+").mp3"
                             );
 
-                    DM.enqueue(request);
+                    AlertDialog.Builder download = new AlertDialog.Builder(context);
+
+                    download.setTitle("Baixar \""+strings[0][position]+"\"?");
+                    download.setMessage("Tem certeza que deseja baixar essa música?\nEla será salva em "+
+                    Environment.getExternalStorageDirectory().getAbsolutePath()+"/Ducksound");
+
+                    download.setPositiveButton("Baixar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            DM.enqueue(request);
+                            dialogInterface.dismiss();
+                        }
+                    });
+
+                    download.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                        }
+                    }).show();
 
                 }else{
                     AlertDialog.Builder alert = new AlertDialog.Builder(context);

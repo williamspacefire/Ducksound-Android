@@ -33,7 +33,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    final static public String CLIENT_ID = "YOUR CLIENT ID HERE";
+    final static public String CLIENT_ID = "da2849d8ad5fea67366e4da7444f0152";
 
     Toolbar play_bar;
     ListView music_list;
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        searchView.setQueryHint("Pesquise por Artista, Banda ou Música");
+        searchView.setQueryHint("Pesquise por sua música");
         return true;
     }
 
@@ -114,8 +114,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    public void onBackPressed() {
+        super.onBackPressed();
         System.exit(0);
     }
 }

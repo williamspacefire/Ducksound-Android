@@ -42,7 +42,6 @@ public class Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        getSupportActionBar().setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         play_bar = (Toolbar) findViewById(R.id.player_bar);
@@ -81,7 +80,7 @@ public class Search extends AppCompatActivity {
         }
 
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        searchView.setQueryHint("Pesquise sua música");
+        searchView.setQueryHint("Pesquise por sua música");
         return true;
     }
 
