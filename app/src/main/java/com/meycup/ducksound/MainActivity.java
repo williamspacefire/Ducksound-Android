@@ -33,7 +33,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    final static public String CLIENT_ID = "da2849d8ad5fea67366e4da7444f0152";
+    final static public String CLIENT_ID = "YOUR CLIENT ID HERE";
 
     Toolbar play_bar;
     ListView music_list;
