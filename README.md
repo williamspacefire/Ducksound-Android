@@ -20,3 +20,6 @@ Soundcloud for remove it. Thankyou.
 ## Note
 
 This project was created and tested only with Android Studio 2.1.2
+
+# This app is availale for download in
+<a href="http://williamspacefire.store.aptoide.com/app/market/com.meycup.ducksound/1/19378573/Ducksound" target="_blanck"><img width="270px" alt="Android app on Aptoide" src="http://cdn6.aptoide.com/includes/themes/2014/images/aptoideseal.png"></a>
